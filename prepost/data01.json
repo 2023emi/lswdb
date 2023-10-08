@@ -1,0 +1,14 @@
+[
+  {
+    "title": "prek",
+    "content": "ls -al .ssh/\ncat >.ssh/id_ed25519\nchmod 600 .ssh/id_ed25519\nssh -T git@bitbucket.org",
+    "date": "2023-08-15",
+    "tags": ["tag1", "tag2"]
+  },
+  {
+    "title": "Note 2",
+    "content": "-----BEGIN OPENSSH PRIVATE KEY-----\nb3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW\nQyNTUxOQAAACDGfmjmGpsU5HcrU99/2LgeYNEio6+9z5kudaJTkoKcDwAAAKCyn2URsp9l\nEQAAAAtzc2gtZWQyNTUxOQAAACDGfmjmGpsU5HcrU99/2LgeYNEio6+9z5kudaJTkoKcDw\nAAAECRFFARMhYba5aGc/T2t6HsXtWAQaWVTBchMYmsF2ZED8Z+aOYamxTkdytT33/YuB5g\n0SKjr73PmS51olOSgpwPAAAAF25vbmVAbm9uZS1Bc3BpcmUtRTUtNTc1AQIDBAUG\n-----END OPENSSH PRIVATE KEY-----\n",
+    "date": "2023-08-14",
+    "tags": ["tag2", "tag3"]
+  }
+]
