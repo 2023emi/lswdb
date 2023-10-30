@@ -2,10 +2,10 @@
 
 # Update and upgrade your system
 sudo apt update
-sudo apt upgrade -y
+#sudo apt upgrade -y
 
 # Install LXDE Desktop Environment
-sudo apt install lxde-core -y
+#sudo apt install lxde-core -y
 
 # Installing XFCE Desktop Environment
 #export DEBIAN_FRONTEND=noninteractive
