@@ -175,6 +175,9 @@ EOL
 
 echo "bash setup completed. You can now start ."
 mkdir ~/txts/
+touch ~/txts/1.txt
+echo "ls"" >> ~/txts/1.txt
+
 # echo "HISTFILE="$HOME/.bash_history"" >> ~/.fzf/fzf.bash
 
 echo "HISTFILE=\$HOME/.bash_history" >> ~/.fzf.bash
