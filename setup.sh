@@ -97,6 +97,7 @@ nnoremap <silent> <leader>s :GitGutterStageHunk<CR>
 nnoremap <silent> <leader>r :GitGutterRevertHunk<CR>
 
 " YouCompleteMe (Python support only)
+set encoding=utf-8
 "Plug 'Valloric/YouCompleteMe', {'do': './install.py --all --exclude=go --verbose'}
 "
 " Enable auto-completion
