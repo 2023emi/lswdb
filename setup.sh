@@ -205,12 +205,16 @@ export FZF_DEFAULT_OPTS="--preview 'bat --color=always {}'"
 export PATH=$PATH:~/.fzf/bin
 #
 fsl() {
-    local selected_file
+    echo "Searching for .txt files in your home directory..."
     selected_file=$(find ~/. -type f -name '*.txt' -exec cat {} \; | fzf --preview 'echo {}' --preview-window=up:3:wrap --prompt 'Select file to edit: ')
     if [[ -n "$selected_file" ]]; then
+        echo "Selected file: $selected_file"
         echo -n "$selected_file" | xclip -selection clipboard
+    else
+        echo "No .txt files found."
     fi
 }
+
 #
 
 EOL
