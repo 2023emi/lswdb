@@ -2,7 +2,7 @@
 
 # Update and upgrade your system
 sudo apt update
-sudo apt install vim tmux wget xclip curl git -y 
+sudo apt install vim tmux wget xclip curl git python3 python3-pip -y 
 
 ## DeCreate  filz
 sudo rm -r ~/.vim && sudo rm -r ~/.bashrc  && sudo rm -r ~/.vimrc && sudo rm -r ~/.fzf
@@ -98,6 +98,8 @@ nnoremap <silent> <leader>r :GitGutterRevertHunk<CR>
 
 " YouCompleteMe (Python support only)
 set encoding=utf-8
+pip3 install ycmd
+
 "Plug 'Valloric/YouCompleteMe', {'do': './install.py --all --exclude=go --verbose'}
 "
 " Enable auto-completion
