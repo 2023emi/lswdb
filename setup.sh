@@ -301,6 +301,7 @@ git clone https://github.com/voldikss/vim-floaterm.git ~/.vim/bundle/vim-floater
 
 #Install YouCompleteMe
 cd ~/.vim/bundle/ && git clone https://github.com/Valloric/YouCompleteMe.git 
+git submodule update --init --recursive 
 sudo apt-get install build-essential clang -y
 sudo apt-get install python-dev python2.7-dev python3-dev -y
 ./install.py 
