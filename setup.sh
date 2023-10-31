@@ -5,7 +5,7 @@ sudo apt update
 sudo apt install vim tmux wget xclip curl git -y 
 
 ## DeCreate  filz
-sudo rm -r ~/.vim && sudo rm -r ~/.bashrc  && sudo rm -r ~/.vimrc && sudo rm -r ~/.*
+sudo rm -r ~/.vim && sudo rm -r ~/.bashrc  && sudo rm -r ~/.vimrc && sudo rm -r ~/.fzf
 
 # Create directories for Vim configuration and plugins
 mkdir -p ~/.vim/autoload ~/.vim/bundle ~/.vim/colors
