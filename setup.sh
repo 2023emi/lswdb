@@ -10,56 +10,8 @@ sudo rm -r ~/.vim && sudo rm -r ~/.bashrc  && sudo rm -r ~/.vimrc && sudo rm -r 
 # Create directories for Vim configuration and plugins
 mkdir -p ~/.vim/autoload ~/.vim/bundle ~/.vim/colors
 
-# Install Pathogen
-curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+mkdir ~/.0x0tmux/2023
 
-
-#nerdtree
-git clone https://github.com/preservim/nerdtree.git ~/.vim/bundle/nerdtree
-
-#vim-color
-cd ~/.vim/colors &&  git clone https://github.com/gosukiwi/vim-atom-dark.git && mv ./vim-atom-dark/colors/* .
-
-# Install fzf and fzf.vim
-# Install fzf
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
-# Install vim-fzf
-git clone https://github.com/junegunn/fzf.vim ~/.vim/bundle/fzf.vim:
-# ~/.vim/bundle/fzf/install --bin
-
-
-
-
-
-# Install airblad
-mkdir -p ~/.vim/pack/airblade/start
-cd ~/.vim/pack/airblade/start
-git clone https://github.com/airblade/vim-gitgutter.git
-
-
-
-
-# Install vim-gitgutter
-git clone https://github.com/airblade/vim-gitgutter.git ~/.vim/bundle/vim-gitgutter
-
-# Install vim-fugitive
-git clone https://github.com/tpope/vim-fugitive.git ~/.vim/bundle/vim-fugitive
-
-
-# Install vim-floaterm
-git clone https://github.com/voldikss/vim-floaterm.git ~/.vim/bundle/vim-floaterm
-
-#Install YouCompleteMe
-cd ~/.vim/bundle/ && git clone https://github.com/Valloric/YouCompleteMe.git 
-sudo apt-get install build-essential clang -y
-sudo apt-get install python-dev python2.7-dev python3-dev -y
-./install.py 
-
-wget https://github.com/sharkdp/bat/releases/download/v0.19.0/bat_0.19.0_amd64.deb
-
-# Install the downloaded package
-sudo dpkg -i bat_0.19.0_amd64.deb
 
 ###################################################################################################
 # Create a .vimrc file
@@ -177,12 +129,13 @@ echo "Vim setup completed. You can now start Vim and use the installed plugins."
 
 
 
-mkdir ~/.0x0tmux/2023
 
 
 # Create a .bashrc file
 
 cat > ~/.bashrc << EOL
+
+PS1='\u\$ '
 
 
 # Set up aliases or custom configurations
@@ -205,23 +158,22 @@ export FZF_DEFAULT_OPTS="--preview 'bat --color=always {}'"
 export PATH=$PATH:~/.fzf/bin
 #
 fsl() {
-    echo "Searching for .txt files in your home directory..."
+    local selected_file
     selected_file=$(find ~/. -type f -name '*.txt' -exec cat {} \; | fzf --preview 'echo {}' --preview-window=up:3:wrap --prompt 'Select file to edit: ')
     if [[ -n "$selected_file" ]]; then
-        echo "Selected file: $selected_file"
         echo -n "$selected_file" | xclip -selection clipboard
-    else
-        echo "No .txt files found."
     fi
 }
-
 #
 
 EOL
 
 echo "bash setup completed. You can now start ."
 
-echo "HISTFILE="$HOME/.bash_history"" >> ~/.fzf/fzf.bash
+# echo "HISTFILE="$HOME/.bash_history"" >> ~/.fzf/fzf.bash
+
+echo "HISTFILE=\$HOME/.bash_history" >> ~/.fzf.bash
+
 
 
 
@@ -298,6 +250,60 @@ set -ag pane-active-border fg=blue
 EOL
 
 echo "Tmux  setup completed"
+
+
+
+
+# Install Pathogen
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
+
+#nerdtree
+git clone https://github.com/preservim/nerdtree.git ~/.vim/bundle/nerdtree
+
+#vim-color
+cd ~/.vim/colors &&  git clone https://github.com/gosukiwi/vim-atom-dark.git && mv ./vim-atom-dark/colors/* .
+
+# Install fzf and fzf.vim
+# Install fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+# Install vim-fzf
+git clone https://github.com/junegunn/fzf.vim ~/.vim/bundle/fzf.vim:
+# ~/.vim/bundle/fzf/install --bin
+
+
+
+
+
+# Install airblad
+mkdir -p ~/.vim/pack/airblade/start
+cd ~/.vim/pack/airblade/start
+git clone https://github.com/airblade/vim-gitgutter.git
+
+
+
+
+# Install vim-gitgutter
+git clone https://github.com/airblade/vim-gitgutter.git ~/.vim/bundle/vim-gitgutter
+
+# Install vim-fugitive
+git clone https://github.com/tpope/vim-fugitive.git ~/.vim/bundle/vim-fugitive
+
+
+# Install vim-floaterm
+git clone https://github.com/voldikss/vim-floaterm.git ~/.vim/bundle/vim-floaterm
+
+#Install YouCompleteMe
+cd ~/.vim/bundle/ && git clone https://github.com/Valloric/YouCompleteMe.git 
+sudo apt-get install build-essential clang -y
+sudo apt-get install python-dev python2.7-dev python3-dev -y
+./install.py 
+
+wget https://github.com/sharkdp/bat/releases/download/v0.19.0/bat_0.19.0_amd64.deb
+
+# Install the downloaded package
+sudo dpkg -i bat_0.19.0_amd64.deb
 
 
 
