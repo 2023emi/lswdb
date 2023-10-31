@@ -206,7 +206,7 @@ export PATH=$PATH:~/.fzf/bin
 #
 fsl() {
     local selected_file
-    selected_file=$(find /home/caspi/txtfiles -type f -name '*.txt' -exec cat {} \; | fzf --preview 'echo {}' --preview-window=up:3:wrap --prompt 'Select file to edit: ')
+    selected_file=$(find ~/. -type f -name '*.txt' -exec cat {} \; | fzf --preview 'echo {}' --preview-window=up:3:wrap --prompt 'Select file to edit: ')
     if [[ -n "$selected_file" ]]; then
         echo -n "$selected_file" | xclip -selection clipboard
     fi
