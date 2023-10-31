@@ -2,7 +2,7 @@
 
 # Update and upgrade your system
 sudo apt update
-sudo apt install vim tmux wget xclip curl git python3 python3-pip -y 
+sudo apt install vim tmux wget xclip curl git python3 python3-pip cmake -y 
 pip3 install ycmd
 
 ## DeCreate  filz
