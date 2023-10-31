@@ -2,7 +2,7 @@
 
 # Update and upgrade your system
 sudo apt update
-sudo apt install vim tmux wget curl git -y 
+sudo apt install vim tmux wget xclip curl git -y 
 
 ## DeCreate  filz
 sudo rm -r ~/.vim && sudo rm -r ~/.bashrc  && sudo rm -r ~/.vimrc && sudo rm -r ~/.*
