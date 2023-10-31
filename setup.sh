@@ -92,19 +92,10 @@ nnoremap YYY :%!xclip -i -selection clipboard<CR>
 "
 " Enable Pathogen
 " Load pathogen and infect the runtime path
-execute pathogen#infect()
-"
+call pathogen#infect()
+call pathogen#helptags()"
+
 " List of plugins
-"github.com/tpope/vim-fugitive.git)
-"github.com/vim-airline/vim-airline.git')
-"github.com/vim-airline/vim-airline-themes.git')
-"github.com/altercation/vim-colors-solarized.git')
-"github.com/scrooloose/nerdtree.git')
-"
-"
-" Customize your Vim settings here
-set number
-syntax on
 "
 "
 " Define key mappings
