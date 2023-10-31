@@ -211,6 +211,8 @@ export FZF_DEFAULT_OPTS="--preview 'bat --color=always {}'"
 #
 #Custom bashf's
 #
+export PATH=$PATH:~/.fzf/bin
+#
 fsl() {
     local selected_file
     selected_file=$(find /home/caspi/txtfiles -type f -name '*.txt' -exec cat {} \; | fzf --preview 'echo {}' --preview-window=up:3:wrap --prompt 'Select file to edit: ')
